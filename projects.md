@@ -1,8 +1,8 @@
 ---
-layout:          projects
-title:           Topics
+layout: projects
+title: Projects
 show_collection: projects
-featured:        true
+description: >
+  All the projects I've done so far.
+no_groups: true
 ---
-
-hello,

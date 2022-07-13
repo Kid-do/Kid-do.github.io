@@ -1,57 +1,37 @@
 <span class="sr-only">{{ site.data.strings.navigation | default:"Navigation" }}{{ site.data.strings.colon | default:":" }}</span>
 <ul>
-  {% if site.menu %}
-    {% for node in site.menu %}
-      {% assign url = node.url | default: node.href %}
-      <li>
-        <a
-          {% if forloop.first %}id="_drawer--opened"{% endif %}
-          href="{% include_cached smart-url url=url %}"
-          class="sidebar-nav-item"
-          {% if node.rel %}rel="{{ node.rel }}"{% endif %}
-        >
-          {{ node.name | default:node.title }}
-        </a>
-      </li>
-    {% endfor %}
-  {% else %}
-    {% assign pages = site.pages %}
-    {% assign documents = site.documents %}
-    {% assign nodes = pages | concat: documents | where: "menu", true | sort: "order" %}
-    {% assign subnodes = pages | concat: documents | where: "menu", false | where: "submenu", true | sort: "order" %}
-
-    {% for node in nodes %}
-      {% assign count = count | plus: 1 %}
-      {% unless node.redirect_to %}
+  {% assign nodes = site.html_pages | concat: site.documents | where: "sidebar", true | sort: "order" %}
+  {% assign tag_nodes = nodes | where: "type", "tag" %}
+  {% for node in nodes %}
+    {% unless node.redirect_to %}
+      {% if node.type != "tag" %}
+        {% assign subnodes = tag_nodes | where_exp: "item", "item.category == node.slug" %}
+        {% assign count = count | plus: 1 %}
         <li>
-          <input type="checkbox" id="list-item-{{ count }}" />
+          {% if subnodes != empty %}
+            <input type="checkbox" id="folder-checkbox-{{ count }}" />
+          {% endif %}
           <div class="list-wrapper">
-          <a
-            {% if forloop.first %}id="_navigation"{% endif %}
-            href="{{ node.url | relative_url }}"
-            class="sidebar-nav-item"
-            {% if node.rel %}rel="{{ node.rel }}"{% endif %}
-            >
-            {{ node.title }}
-          </a>
-          {% if node.submenu %}<label class="folder" for="list-item-{{ count }}">▾</label>{% endif %}
-          </div>
-          <ul class="list-body">
-            {% for subnode in subnodes %}
-            {% if subnode.category == node.slug %}
-            <li>
-              <a class="sidebar-nav-subitem{% if page.url == subnode.url %} active{% endif %}"
-                href="{{ subnode.url | relative_url }}">{{ subnode.slug }}</a>
-            </li>
+            <a {% if forloop.first %}id="_navigation"{% endif %} href="{{ node.url | relative_url }}" class="sidebar-nav-item" {% if node.rel %}rel="{{ node.rel }}"{% endif %} >{{ node.title }}</a>
+            {% if subnodes != empty %}
+              <button class="spread-btn" onclick="javascript:spread({{ count }})">
+                <label id="spread-icon-{{ count }}" class="material-icons">arrow_right</label>
+              </button>
             {% endif %}
-            {% endfor %}
-          </ul>
+          </div>
+          {% for subnode in subnodes %}
+            {% if forloop.first %}<ul class="list-body">{% endif %}
+                <li>
+                  <a class="sidebar-nav-subitem" href="{{ subnode.url | relative_url }}">{{ subnode.title }}</a>
+                </li>
+            {% if forloop.last %}</ul>{% endif %}
+          {% endfor %}
         </li>
-      {% else %}
-        <li>
-          <a href="{{ node.redirect_to }}" class="sidebar-nav-item external" >{{ node.title }}</a>
-        </li>
-      {% endunless %}
-    {% endfor %}
-  {% endif %}
+      {% endif %}
+    {% else %}
+      <li>
+        <a href="{{ node.redirect_to }}" class="sidebar-nav-item external">{{ node.title }}</a>
+      </li>
+    {% endunless %}
+  {% endfor %}
 </ul>

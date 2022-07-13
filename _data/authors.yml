@@ -2,28 +2,33 @@
 # Must be the same as `author` in `_config.yml`.
 # Change `author1` to your shortname.
 author1:
-  name:              kid-do
-  email:             krsc0707@gmail.com
+  name:              DaeIn Lee
+  email:             daein0lee@gmail.com
 
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    _authors/data.yml
+    HANA Core Developer at [SAP Labs Korea](https://www.sap.com/korea/about/labs-korea.html).<br>
+    Please check my [Resume][resume] to find out more about me!<br>
+
+    [resume]: /resume/
 
   # This photo will be used in the about section
   picture:
-    path:            main.jpg
+    path:            /assets/img/seattle.png
     # srcset is optional, but can be used to provide higher res versions for retina displays
-    srcset:
-      1x:           main.jpg
-      2x:           main.jpg
+    # srcset:
+    #   1x:
+    #   2x:
 
   # Social media icons in sidebar
   # Comment/uncommet to show/hide
   # Rearrange to change the order in which they appear
   social:
-    github:          kid-do
-    email:           krsc0707@gmail.com
+    linkedin:        daein-lee-3b6ba9139
+    github:          lazyren
+    stackoverflow:   4294737
+    email:           lazy0ren@gmail.com
     # rss:             https://lazyren.github.io/feed.xml
     # facebook:        <username>
     # google:          <number>
