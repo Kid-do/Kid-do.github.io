@@ -14,6 +14,7 @@ _drafts
 *.swp
 *.vi
 *~
+*Zone.Identifier
 
 # OS or Editor folders
 .DS_Store
@@ -28,6 +29,7 @@ nbproject
 *.sublime-project
 *.sublime-workspace
 .idea
+*.Zone.Identifier
 
 # Komodo
 *.komodoproject
@@ -38,17 +40,13 @@ validation-status.json
 validation-report.json
 
 # Folders to ignore
+.vscode
 node_modules
-package*.json
-vendor
+.bundle
+.jekyll-cache
 .sass-cache
 .jekyll-metadata
-.jekyll-cache
+vendor
 *.gem
 _zip
 /stats.json
-/dist
-/build
-
-/assets/js/*hydejack-*
-/_sass/*/__*__/*
