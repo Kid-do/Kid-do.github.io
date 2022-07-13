@@ -87,7 +87,7 @@ excerpt_separator:     <!--more-->
 # ---------------------------------------------------------------------------------------
 
 theme: jekyll-theme-hydejack
-remote_theme: hydecorp/hydejack@v9
+# remote_theme: hydecorp/hydejack@v9
 
 # jekyll-feed settings
 feed:
