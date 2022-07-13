@@ -87,8 +87,8 @@ excerpt_separator:     <!--more-->
 # ---------------------------------------------------------------------------------------
 # 로컬일땐 theme 만
 # 업로드시 remote 만
-theme: jekyll-theme-hydejack
-# remote_theme: hydecorp/hydejack@v9
+# theme: jekyll-theme-hydejack
+remote_theme: hydecorp/hydejack@v9
 
 # jekyll-feed settings
 feed:
