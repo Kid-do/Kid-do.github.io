@@ -1,10 +1,10 @@
 ---
 layout: tag-list
 type: tag
-title: Rust
-slug: rust
+title: Python
+slug: python
 category: studylog
 sidebar: true
 description: >
-   Rust related posts
+   python related posts
 ---

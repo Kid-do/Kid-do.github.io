@@ -20,39 +20,37 @@
 lang:                  ko-KR, en-US
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 Lazy Ren
+title:                 Kid-do
 
-timezone:              Asia/Seoul
+# timezone:              Asia/Seoul
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  Work Hard to be Lazy.
-  SW Engineer at Samsung Research.
+  To be the laziest developer
 
 # A shorter description for the sidebar.
 tagline:               >
-  Work Hard to be Lazy.
+  To be the laziest developer
 
 # A list of keywords for your blog
-keywords:              ["Development", "C++", "Rust", "Jekyll"]
+# keywords:              ["Development", "C++", "Rust", "Jekyll"]
 
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
-logo:                  /assets/img/seattle.png
+logo:                  /assets/img/main.jpg
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
   # Used by `jekyll-feed`:
-  name:                DaeIn Lee
-  email:               daein0lee@gmail.com
-  picture:             /assets/img/seattle.png
-  social:
-    linkedin:          daein-lee-3b6ba9139
-    github:            lazyren
-    stackoverflow:     4294737
-    email:             daein0lee@gmail.com
+  name:                Kid-do
+  email:               krsc0707@gmail.com
+  picture:            /assets/img/main.jpg
+  social:          
+    github:            kid-do
+    intagram:          kitdoh
+    email:             krsc0707@gmail.com
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
@@ -91,7 +89,7 @@ excerpt_separator:     <!--more-->
 
 # Sidebar image and theme color of the site.
 accent_image:
-  background:          center / cover url(/assets/img/music-cat-no-loop.gif)
+  background:          /assets/img/logo.png
   overlay:             false
 accent_color:          rgb(0,174,239)
 
@@ -140,16 +138,16 @@ defaults:
       sitemap:         false
 
   # Don't include site verification file(for google) in the sitemap
-  - scope:
-      path:            google93abcae935f31b7d.html
-    values:
-      sitemap:         false
+  # - scope:
+  #     path:            google93abcae935f31b7d.html
+  #   values:
+  #     sitemap:         false
 
-  # Don't include site verification file(for naver) in the sitemap
-  - scope:
-      path:            navera03014a241218f942080c56d67e79469.html
-    values:
-      sitemap:         false
+  # # Don't include site verification file(for naver) in the sitemap
+  # - scope:
+  #     path:            navera03014a241218f942080c56d67e79469.html
+  #   values:
+  #     sitemap:         false
 
   # You can use the following to enable comments on all posts.
   - scope:
@@ -189,12 +187,12 @@ kramdown:
 
 # Set your Google Analytics id to receive `pageview` events.
 # To remove Google Analytics from your page, remove the line below.
-google_analytics:      UA-68290006-3
+# google_analytics:      UA-68290006-3
 
 # Set which comment system to use
-comments:
-  # 'disqus' / 'giscus' / 'utterances' are available
-  provider:            giscus
+# comments:
+#   # 'disqus' / 'giscus' / 'utterances' are available
+#   provider:            giscus
 
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
@@ -213,16 +211,16 @@ comments:
 # Make sure all variables are set properly. Check below link for detail.
 # https://giscus.vercel.app/
 giscus:
-  repo:                "LazyRen/LazyRen.github.io"
-  repo-id:             "MDEwOlJlcG9zaXRvcnkyNzU4Mjk1NTc="
-  category:            "Comments"
-  category-id:         "DIC_kwDOEHDTNc4B-MIg"
-  mapping:             "pathname"
-  reaction-enabled:    "1"
-  data-emit-metadata:  "0"
-  theme:               "dark_dimmed"
-  data-lang:           "en"
-  crossorigin:         "anonymous"
+  # repo:                "LazyRen/LazyRen.github.io"
+  # repo-id:             "MDEwOlJlcG9zaXRvcnkyNzU4Mjk1NTc="
+  # category:            "Comments"
+  # category-id:         "DIC_kwDOEHDTNc4B-MIg"
+  # mapping:             "pathname"
+  # reaction-enabled:    "1"
+  # data-emit-metadata:  "0"
+  # theme:               "dark_dimmed"
+  # data-lang:           "en"
+  # crossorigin:         "anonymous"
 
 # Setting a tinyletter username will enable the newsletter subscription box.
 # PRO version only!
@@ -393,8 +391,8 @@ plugins:
 # ---------------------------------------------------------------------------------------
 
 # Where you proof that you own this site (used by jekyll-seo-tag)
-google_site_verification: "zIn7l_GwuOi4WnyRQsdhI9Jpn6IAs0SLR_4HG8OZzsM"
-# -- or --
+# google_site_verification: "zIn7l_GwuOi4WnyRQsdhI9Jpn6IAs0SLR_4HG8OZzsM"
+# # -- or --
 # webmaster_verifications:
 #   google:              <verification-id>
 #   bing:                <verification-id>
@@ -481,5 +479,4 @@ jekyll_compose:
 feed:
   categories:
     - devlog
-    - review
     - studylog

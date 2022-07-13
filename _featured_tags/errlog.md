@@ -1,10 +1,11 @@
 ---
 layout: tag-list
 type: tag
-title: Blog
-slug: blog
+title: Errlog
+slug: errlog
 category: devlog
 sidebar: true
+order: 3
 description: >
-   Posts about blogging / jekyll theme.
+   Any article related to errlog.
 ---
