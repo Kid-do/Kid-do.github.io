@@ -8,7 +8,7 @@ author1:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    게으른 개발자가 되기위해 부지런한 개발자를 꿈꾸는 
+    _authors/data.yml
 
   # This photo will be used in the about section
   picture:
