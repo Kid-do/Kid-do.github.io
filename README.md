@@ -1,4 +1,4 @@
-# Kid-don's Blog
+# Kid-do's Blog
 
 ## [About Me](https://lazyren.github.io/about/)
 
@@ -9,6 +9,8 @@ Before this, I used to have [naver blog] but is no longer maintained.<br>
 
 Please feel free to contact me for any questions!
 my instagram DM is alwayas open
+
+
 
 ## About Hydejack
 
