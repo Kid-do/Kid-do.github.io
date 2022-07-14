@@ -6,5 +6,5 @@ slug: gitblog
 category: devlog
 sidebar: false
 description: >
-   # Any article related to Git.
+   Any article related to Gitblog.
 ---
