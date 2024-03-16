@@ -1,0 +1,54 @@
+---
+layout: splash
+title: Hi, I'm Ben
+author_profile: false
+hidden: true
+header:
+    overlay_color: "#000"
+    overlay_filter: "0.5"
+    overlay_image: /assets/images/home-feature.jpg
+excerpt: "Computer Science Student, Developer & Tech Enthusiast"
+
+projects_row:
+    - image_path: assets/images/strava-app.png
+      alt: "Strava App screenshot"
+      title: "Strava Run Stats App"
+      excerpt: "Built with Node.js, MongoDB & Bootstrap.  Deployed to a VPS using GitHub Actions & Docker."
+      url: "https://strava.bjm.me.uk"
+      github: "benmepham/strava-app"
+      btn_class: "btn--primary"
+    - image_path: /assets/images/quiz-app.png
+      alt: "Quiz app screenshot"
+      title: "React Quiz App"
+      excerpt: "Built with React, uses the [Open Trivia DB](https://opentdb.com/) API."
+      url: "https://bjm.me.uk/quiz-app"
+      github: "benmepham/quiz-app"
+      btn_class: "btn--primary"
+    - image_path: /assets/images/fcc-projects.png
+      alt: "FreeCodeCamp project screenshot"
+      title: "FreeCodeCamp Projects"
+      excerpt: "My projects for the FCC full-stack certification."
+      url: "https://bjm.me.uk/fcc-projects"
+      github: "benmepham/fcc-projects"
+      btn_class: "btn--primary"
+
+intro:
+    - excerpt: "I'm currently in my final year of a Computer Science degree apprenticeship. I have enjoyed tinkering with technology from a young age, including building computers and creating websites. Currently, my main interests are: Software Development, DevOps and Linux/Self-Hosting."
+      url: "/about"
+      btn_label: "Read More"
+      btn_class: "btn--primary"
+---
+
+{% include feature_row id="intro" type="center" %}
+
+<h2>My Projects</h2>
+
+{% include custom_feature_row id='projects_row' title='Projects' %}
+
+<h2>
+    {{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}
+</h2>
+
+{% if paginator %} {% assign posts = paginator.posts %} {% else %} {% assign
+posts = site.posts %} {% endif %} {% for post in posts %} {% include
+archive-single.html %} {% endfor %} {% include paginator.html %}
