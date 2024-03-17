@@ -115,7 +115,7 @@ defaults:
           path: ""
           type: posts
       values:
-          layout: category
+          layout: single
           author_profile: true
           read_time: true
           comments: true
@@ -127,15 +127,16 @@ defaults:
           path: "_pages"
           type: pages
       values:
-          layout: category
+          layout: single
           author_profile: true
 
-#category_archive:
-#    type: liquid
-#    path: /categories/
-#tag_archive:
-#    type: liquid
-#    path: /tags/
+category_archive:
+    type: liquid
+    path: /categories/
+    
+tag_archive:
+    type: liquid
+    path: /tags/
 
 # GSE
 google:
@@ -173,6 +174,6 @@ google:
 #
 #naver_site_verification: "6BF5A01C0E650B479B612AC5A2184144"
 
-collections:
-  categories:
-    output: true
+# collections:
+#   categories:
+#     output: true

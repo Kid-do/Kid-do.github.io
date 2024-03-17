@@ -1,7 +1,7 @@
 ---
 layout: tags 
 title: Hi, I'm Kid-do!
-author_profile: false
+author_profile: true
 hidden: true
 header:
     overlay_color: "#000"
@@ -31,27 +31,19 @@ projects_row:
       url: "https://bjm.me.uk/fcc-projects"
       github: "benmepham/fcc-projects"
       btn_class: "btn--primary"
-
-maincategories:
-    - layout: single
-      title: "Posts by Category"
-      permalink: /categories/
 ---
 
-<div class="taxonomy__index">
-  <!-- Main Categories Feature Row -->
-  {% include feature_row id="maincategories" type="center" %}
+<h2>Categories</h2><hr>
 
-  <!-- List of Categories -->
-  <ul style="list-style: none; padding: 0; margin: 0;">
-    {% for category in site.categories %}
-      <li style="margin-bottom: 10px;">
-        <a href="./categories/#{{ category | first | slugify }}">{{ category | first }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
-<h2>My Projects</h2>
+<ul style="list-style: none; padding-left: 0;">
+  {% for category in site.categories %}
+    <li style="margin-bottom: 10px">
+      - <a href="./categories/#{{ category[0] | slugify }}" style="text-decoration: none;">{{ category[0] }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+<h2>My Projects</h2><hr>
 
 {% include custom_feature_row id='projects_row' title='Projects' %}
 
