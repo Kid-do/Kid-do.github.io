@@ -1,37 +1,44 @@
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# bundle exec jekyll serve
 
+#---
+#title: "Posts by Category"
+#layout: categories
+#permalink: /categories/
+#author_profile: true
+#---
+
+
+# For technical reasons, this file is *NOT* reloaded automatically when you use
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-locale: "en-GB"
-title: "Ben Mepham"
-title_separator: "-"
-subtitle: "CS Student & Tech Enthusiast"
-name: "Ben Mepham"
+locale: "ko-KR"
+title: "Kid-do"
+title_separator: "|"
+subtitle: "Junior dev"
+name: "Kid-do"
 logo: "/assets/images/b-icon.png"
 #teaser: #set default teaser image
-description: "Ben Mepham's personal website and blog"
-url: "https://bjm.me.uk"
-repository: "benmepham/benmepham.github.io"
-github_username: benmepham
+description: "kiddo's devlog"
+#url: "https://bjm.me.uk"
+repository: "Kid-do/Kid-do.github.io"
+github_username: Kid-do
 minimal_mistakes_skin: default
 search: true
 
 # Comments
-comments:
-    provider: "giscus"
-    giscus:
-      repo_id              : "MDEwOlJlcG9zaXRvcnkyNTkwNjI1NDc="
-      category_name        : "Blog Comments"
-      category_id          : "DIC_kwDOD3D7E84CPC2w"
-      discussion_term      : "og:title"
-      reactions_enabled    : '1' # '1' for enabled (default), '0' for disabled
-      theme                : 'light' # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
+#comments:
+#    provider: "giscus"
+#    giscus:
+#      repo_id              : "MDEwOlJlcG9zaXRvcnkyNTkwNjI1NDc="
+#      category_name        : "Blog Comments"
+#      category_id          : "DIC_kwDOD3D7E84CPC2w"
+#      discussion_term      : "og:title"
+#      reactions_enabled    : '1' # '1' for enabled (default), '0' for disabled
+#      theme                : 'dark' # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
 
 analytics:
   provider: custom
@@ -43,7 +50,7 @@ remote_theme: mmistakes/minimal-mistakes
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: Europe/London
+timezone: Asia/Seoul
 
 include:
     - _pages
@@ -75,32 +82,32 @@ plugins:
     - jekyll-include-cache
 
 author:
-    name: "Ben Mepham"
+    name: "kid-do"
     avatar: "/assets/images/bio-photo.jpg"
-    bio: "Computer Science Student, Developer & Tech Enthusiast"
-    location: "UK"
+    bio: " author/bio "
+    location: "Korea"
     links:
         - label: "GitHub"
           icon: "fab fa-fw fa-github"
-          url: "https://github.com/benmepham"
-        - label: "Linkedin"
-          icon: "fab fa-fw fa-linkedin"
-          url: "https://www.linkedin.com/in/benmepham"
+          url: "https://github.com/Kid-do"
+        - label: "Instagram"
+          icon: "fab fa-fw fa-instagram"
+          url: "https://instagram.com/kitdoh"  
         - label: "Email"
           icon: "fas fa-fw fa-at"
-          url: "mailto:contact@bjm.me.uk"
+          url: "matilto:krsc0707.krsc0707@gmail.com"
 
 footer:
     links:
         - label: "GitHub"
           icon: "fab fa-fw fa-github"
-          url: "https://github.com/benmepham"
-        - label: "Linkedin"
-          icon: "fab fa-fw fa-linkedin"
-          url: "https://www.linkedin.com/in/benmepham"
+          url: "https://github.com/Kid-do"
+        - label: "Instagram"
+          icon: "fab fa-fw fa-instagram"
+          url: "https://instagram.com/kitdoh"  
         - label: "Email"
           icon: "fas fa-fw fa-at"
-          url: "mailto:contact@bjm.me.uk"
+          url: "matilto:krsc0707.krsc0707@gmail.com"
 
 defaults:
     # _posts
@@ -108,24 +115,64 @@ defaults:
           path: ""
           type: posts
       values:
-          layout: single
+          layout: category
           author_profile: true
           read_time: true
           comments: true
           share: true
           related: true
-          show_date: true
+          show_date: false
     # _pages
     - scope:
           path: "_pages"
           type: pages
       values:
-          layout: single
+          layout: category
           author_profile: true
 
-category_archive:
-    type: liquid
-    path: /categories/
-tag_archive:
-    type: liquid
-    path: /tags/
+#category_archive:
+#    type: liquid
+#    path: /categories/
+#tag_archive:
+#    type: liquid
+#    path: /tags/
+
+# GSE
+google:
+  search_engine_id: kiddo
+
+# <script async src="https://cse.google.com/cse.js?cx=1162bffb4dc854e03">
+# </script>
+# <div class="gcse-search"></div>
+
+
+#SEO, social sharing, and analytics settingsPermalink
+#All optional, but a good idea to take the time setting up to improve SEO and links shared from the site.
+#
+#Google Search ConsolePermalink
+#Formerly known as Google Webmaster Tools, add your verification code like so: google_site_verification: "yourVerificationCode".
+#
+#Note: You likely won’t have to do this if you verify site ownership through Google Analytics instead.
+#
+#Bing Webmaster ToolsPermalink
+#There are several ways to verify site ownership — the easiest adding an authentication code to your config file.
+#
+#Copy and paste the string inside of content:
+#
+#<meta name="msvalidate.01" content="0FC3FD70512616B052E755A56F8952D" />
+#Into _config.yml
+#
+#bing_site_verification: "0FC3FD70512616B052E755A56F8952D"
+#Naver Webmaster ToolsPermalink
+#To verify site ownership you will need to create a Naver account and then Add your site via Naver Webmaster Tools.
+#
+#Much like Google and Bing you’ll be provided with a meta description:
+#
+#<meta name="naver-site-verification" content="6BF5A01C0E650B479B612AC5A2184144">`
+#Which you can add to your _config.yml like so:
+#
+#naver_site_verification: "6BF5A01C0E650B479B612AC5A2184144"
+
+collections:
+  categories:
+    output: true

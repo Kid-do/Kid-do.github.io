@@ -1,13 +1,13 @@
 ---
-layout: splash
-title: Hi, I'm Ben
+layout: tags 
+title: Hi, I'm Kid-do!
 author_profile: false
 hidden: true
 header:
     overlay_color: "#000"
     overlay_filter: "0.5"
     overlay_image: /assets/images/home-feature.jpg
-excerpt: "Computer Science Student, Developer & Tech Enthusiast"
+excerpt: "개발 0년차 주니어 개발자입니다."
 
 projects_row:
     - image_path: assets/images/strava-app.png
@@ -32,15 +32,25 @@ projects_row:
       github: "benmepham/fcc-projects"
       btn_class: "btn--primary"
 
-intro:
-    - excerpt: "I'm currently in my final year of a Computer Science degree apprenticeship. I have enjoyed tinkering with technology from a young age, including building computers and creating websites. Currently, my main interests are: Software Development, DevOps and Linux/Self-Hosting."
-      url: "/about"
-      btn_label: "Read More"
-      btn_class: "btn--primary"
+maincategories:
+    - layout: single
+      title: "Posts by Category"
+      permalink: /categories/
 ---
 
-{% include feature_row id="intro" type="center" %}
+<div class="taxonomy__index">
+  <!-- Main Categories Feature Row -->
+  {% include feature_row id="maincategories" type="center" %}
 
+  <!-- List of Categories -->
+  <ul style="list-style: none; padding: 0; margin: 0;">
+    {% for category in site.categories %}
+      <li style="margin-bottom: 10px;">
+        <a href="./categories/#{{ category | first | slugify }}">{{ category | first }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
 <h2>My Projects</h2>
 
 {% include custom_feature_row id='projects_row' title='Projects' %}
